@@ -15,7 +15,6 @@ import NavBar from './presentation/components/navigation/NavBar.vue'
 <style scoped>
 main {
   height: 100vh;
-  height: -webkit-fill-available;
   max-height: 100vh;
   overflow-x: auto;
   overflow-y: hidden;

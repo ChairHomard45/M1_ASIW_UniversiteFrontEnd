@@ -3,13 +3,24 @@ import { RouterLink } from 'vue-router'
 </script>
 
 <template>
-    <div class="navigation d-flex flex-column flex-shrink-0 p-3" style="width: 280px;">
+    <div class="navigation d-flex flex-column flex-shrink-0 p-3" style="width: 280px">
         <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
             <span class="fs-4">Universite</span>
         </a>
         <hr>
         <ul class="nav nav-pills flex-column mb-auto">
-
+          <li class="nav-item">
+            <RouterLink class="nav-link" active-class="active" to="/">Accueil</RouterLink>
+          </li>
+          <li class="nav-item">
+            <RouterLink class="nav-link" active-class="active" to="/parcours">Parcours</RouterLink>
+          </li>
+          <li class="nav-item">
+            <RouterLink class="nav-link" active-class="active" to="/ue">Ue</RouterLink>
+          </li>
+          <li class="nav-item">
+            <RouterLink class="nav-link" active-class="active" to="/etudiants">Etudiant</RouterLink>
+          </li>
         </ul>
         <hr>
         <div class="dropdown">
