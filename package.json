@@ -15,6 +15,7 @@
   "dependencies": {
     "@kyvg/vue3-notification": "^3.4.1",
     "@popperjs/core": "^2.11.8",
+    "@vueuse/core": "^12.4.0",
     "axios": "^1.7.7",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",

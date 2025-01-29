@@ -50,12 +50,12 @@ const onDeleteEtudiant = (p: Etudiant) => {
 
 const columns = [
   { field: 'EditionEtudiant', style: 'width: 32px;text-align:center;', label: 'Edition', formatter: formatterEdition, onClick: (p: Etudiant) => etudiantForm.value?.openForm(p) },
-  { field: 'ID', label: 'ID', formatter: null },
-  { field: 'NumEtud', label: 'NumEtud', formatter: null, onClick: null },
-  { field: 'Nom', label: 'Nom', formatter: null, onClick: null },
-  { field: 'Prenom', label: 'Prenom', formatter: null, onClick: null },
-  { field: 'Email', label: 'Email', formatter: null, onClick: null },
-  { field: 'Parcours', label: 'Parcours', formatter: formatterParcours, onClick: null },
+  { field: 'ID', label: 'ID', formatter: null, onClick: null, style: null },
+  { field: 'NumEtud', label: 'NumEtud', formatter: null, onClick: null, style: null },
+  { field: 'Nom', label: 'Nom', formatter: null, onClick: null, style: null },
+  { field: 'Prenom', label: 'Prenom', formatter: null, onClick: null, style: null },
+  { field: 'Email', label: 'Email', formatter: null, onClick: null, style: null },
+  { field: 'Parcours', label: 'Parcours', formatter: formatterParcours, onClick: null, style: null },
   { field: 'DeleteEtudiant', label: 'Suppression', formatter: formatterSuppression, onClick: onDeleteEtudiant, style: 'width: 32px;text-align:center;' },
 ];
 
@@ -80,7 +80,7 @@ onMounted(() => {
         </CustomButton>
       </div>
       <div class="card-body">
-        <CustomTable idAttribute="ID" :columns="columns" :data="etudiant" />
+        <CustomTable type="table"  idAttribute="ID" :columns="columns" :data="etudiant" />
       </div>
     </div>
   </div>

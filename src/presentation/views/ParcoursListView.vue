@@ -74,7 +74,7 @@ onMounted(() => {
         </CustomButton>
       </div>
       <div class="card-body">
-        <CustomTable idAttribute="ID" :columns="columns" :data="parcours" />
+        <CustomTable type="table" idAttribute="ID" :columns="columns" :data="parcours" />
       </div>
     </div>
   </div>

@@ -4,7 +4,7 @@ import { defineProps } from 'vue';
 
 defineProps({
   isOpen: {
-    type: Object as () => bool,
+    type: Boolean,
     required: true
   },
   width: {

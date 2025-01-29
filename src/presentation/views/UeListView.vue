@@ -7,10 +7,14 @@ import CustomButton from '@/presentation/components/forms/components/CustomButto
 import UEForm from '@/presentation/components/forms/UEForm.vue';
 import CustomTable from '../components/tables/CustomTable.vue';
 
+import {useRouter} from 'vue-router';
+
 import { UE } from '@/domain/entities/Ue';
 import { UEDAO } from '@/domain/daos/UEDAO';
 
 const ue = ref<UE[]>([]);
+
+const router = useRouter();
 
 const formatterEdition = (ue: UE) => {
   return '<i class="bi bi-pen-fill text-primary"></i>';
@@ -46,7 +50,9 @@ const onDeleteUe = (p: UE) => {
 }
 
 const columns = [
-  { field: 'EditionUE', style: 'width: 32px;text-align:center;', label: 'Edition', formatter: formatterEdition, onClick: (p: UE) => ueForm.value?.openForm(p) },
+  { field: 'EditionUE', style: 'width: 32px;text-align:center;', label: 'Edition', formatter: formatterEdition, onClick: (p: UE) => {
+      router.push(`/uemodif/${p.ID}`)
+    } },
   { field: 'ID', label: 'ID', formatter: null },
   { field: 'NumeroUe', label: 'Numéro', formatter: null, onClick: null },
   { field: 'Intitule', label: 'Intitulé', formatter: null, onClick: null },
@@ -74,7 +80,7 @@ onMounted(() => {
         </CustomButton>
       </div>
       <div class="card-body">
-        <CustomTable idAttribute="ID" :columns="columns" :data="ue" />
+        <CustomTable type="table" idAttribute="ID" :columns="columns" :data="ue" />
       </div>
     </div>
   </div>

@@ -1,8 +1,9 @@
 <template>
   <CustomModal :isOpen="isOpen">
     <template v-slot:title>
-      <template v-if="currentUe && currentUe.ID"> Modification de l'UE </template>
-      <template v-else> Nouvelle UE </template>
+      <!--<template v-if="currentUe && currentUe.ID"> Modification de l'UE </template>
+      <template v-else> Nouvelle UE </template>-->
+      Nouvelle UE
     </template>
     <template v-slot:body>
       <div class="text-start mt-1 mb-1">

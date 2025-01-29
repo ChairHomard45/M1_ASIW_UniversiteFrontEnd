@@ -32,7 +32,7 @@ import CustomButton from '@/presentation/components/forms/components/CustomButto
 import { ParcoursDAO } from '@/domain/daos/ParcoursDAO';
 import CustomModal from '@/presentation/components/modals/CustomModal.vue';
 
-const currentParcours = ref<Parcours>(new Parcours(null, null, null));
+const currentParcours = ref<Parcours>(new Parcours(null, null, null,null));
 const isOpen = ref(false);
 
 const emit = defineEmits(['create:parcours', 'update:parcours']);
@@ -43,13 +43,13 @@ const openForm = (parcours: Parcours | null = null) => {
   if (parcours) {
     currentParcours.value = parcours;
   } else {
-    currentParcours.value = new Parcours(null, null, null);
+    currentParcours.value = new Parcours(null, null, null, null);
   }
 };
 
 const closeForm = () => {
   isOpen.value = false;
-  currentParcours.value = new Parcours(null, null, null);
+  currentParcours.value = new Parcours(null, null, null, null);
 };
 
 const saveParcours = () => {

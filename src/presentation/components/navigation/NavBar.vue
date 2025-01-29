@@ -35,7 +35,7 @@ import { RouterLink } from 'vue-router'
                 <li>
                     <hr class="dropdown-divider">
                 </li>
-                <li><a class="dropdown-item" href="#">Déconnexion</a></li>
+              <li><a class="dropdown-item" href="#">Déconnexion</a></li>
             </ul>
         </div>
     </div>

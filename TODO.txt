@@ -1,3 +1,3 @@
-- Create a new page for Modification of UE
-- Create Modal for Notes and Parcours
-- Implementation
+- Entity Note + DAOS
+- Modif Entity Etudiant
+-
